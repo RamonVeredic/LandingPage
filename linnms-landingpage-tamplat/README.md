@@ -2,15 +2,16 @@
 
 Landing page khusus **LINNMS** dalam folder mandiri `linnms-landingpage-tamplat/` di repository `RamonVeredic/LandingPage:main`. Template ini berdampingan dengan `Tech-Netnms/` dan tidak mengubah template pertama.
 
-## Konsep
+## Struktur situs
 
-**Halaman depan memperkenalkan LINNMS sebagai produk Network Management System**, dengan ringkasan pemantauan perangkat, OLT/ONU dan SNMP, visual ringkasan jaringan konseptual, manfaat operasional, dan tautan ke instalasi. Halaman teknis dipisahkan menjadi panduan:
+- `index.html` — landing page produk: hero, contoh dashboard LINNMS, fitur utama, profil singkat dan CTA dokumentasi.
+- `about.html` — profil produk, tujuan, dan sasaran pengguna LINNMS.
+- `docs.html` — indeks dokumentasi.
+- `instalasi.html` — panduan instalasi LINNMS Production (Docker Compose / CasaOS).
+- `oid.html` — referensi OID dan SNMP yang dapat digunakan dan dibagikan oleh pengguna umum, **bagian dari dokumentasi**, bukan produk.
+- `troubleshooting.html` — masalah saat memakai aplikasi LINNMS (akun, OLT/ONU, sinkronisasi, dan SNMP), bukan kegagalan GitHub atau CI.
 
-- `index.html` — pengenalan LINNMS, kemampuan utama, dan tautan bantuan.
-- `about.html` — identitas produk, sasaran pengguna dan konteks jaringan.
-- `docs.html` — instalasi Docker Compose / CasaOS, registry, volume, verifikasi, pembaruan.
-- `oid.html` — referensi OID standar MIB-II / IF-MIB serta cabang ZTE / HIOSO, tabel pencarian dan perintah SNMP.
-- `troubleshooting.html` — pemeriksaan masalah GHCR, Docker, database, HTTP, SNMP dan OID.
+Navigasi utama: **Beranda · Fitur · Dokumentasi · Tentang**. Fitur mengarah ke bagian produk pada beranda. Instalasi, OID, dan troubleshooting diakses dari pusat dokumentasi dan tetap memiliki tautan langsung.
 
 Desain responsive dark navy dengan aksen **hijau → cyan → biru** mengikuti **logo LINNMS resmi**, bukan logo generik. Aset `assets/linnms-logo.png` dan `favicon.ico` bersumber dari `RamonVeredic/icon` pada `LINNMS/LINNMS_icon_cropped.png` dan `LINNMS/LINNMS_icon.ico`. Sub-brand konsisten: **NETWORK MANAGEMENT SYSTEM**.
 
