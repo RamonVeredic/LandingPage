@@ -1,35 +1,37 @@
-# LINNMS Landing Page — Operator Documentation
+# LINNMS — Network Management System Landing Page
 
-Folder template **`linnms-landingpage-tamplat/`** untuk repository koleksi **`plannethost/LandingPage`**.
+Landing page khusus **LINNMS** dalam folder mandiri `linnms-landingpage-tamplat/` di repository `RamonVeredic/LandingPage:main`. Template ini berdampingan dengan `Tech-Netnms/` dan tidak mengubah template pertama.
 
-Ini adalah **template kedua** yang berdiri sendiri, diletakkan sejajar dengan folder `Tech-Netnms/`; tidak mengganti, menghapus atau mencampurkan file template pertama.
+## Struktur situs
 
-## Tujuan
-Landing page LINNMS Production dengan gaya dark-network, aksen biru/cyan, dan dokumentasi operasional yang fokus pada:
-- `index.html`: pintu masuk dan navigasi topik.
-- `docs.html`: instalasi Docker Compose/CasaOS, image, port, volume, kesehatan layanan dan upgrade.
-- `oid.html`: OID standar MIB-II/IF-MIB, contoh cabang ZTE/HIOSO, GET/WALK, dan interpretasi.
-- `troubleshooting.html`: pesan error GHCR, Docker, database, web, SNMP dan OID.
-- `about.html`: batas cakupan dokumentasi.
+- `index.html` — landing page produk: hero, contoh dashboard LINNMS, fitur utama, profil singkat dan CTA dokumentasi.
+- `about.html` — profil produk, tujuan, dan sasaran pengguna LINNMS.
+- `docs.html` — indeks dokumentasi.
+- `instalasi.html` — panduan instalasi LINNMS Production (Docker Compose / CasaOS).
+- `oid.html` — referensi OID dan SNMP yang dapat digunakan dan dibagikan oleh pengguna umum, **bagian dari dokumentasi**, bukan produk.
+- `troubleshooting.html` — masalah saat memakai aplikasi LINNMS (akun, OLT/ONU, sinkronisasi, dan SNMP), bukan kegagalan GitHub atau CI.
 
-Semua halaman menggunakan `styles.css` dan `script.js` tanpa framework, bundler, backend, atau aset gambar eksternal. Font dapat menggunakan Google Fonts, dengan fallback sistem saat jaringan offline.
+Navigasi utama: **Beranda · Fitur · Dokumentasi · Tentang**. Fitur mengarah ke bagian produk pada beranda. Instalasi, OID, dan troubleshooting diakses dari pusat dokumentasi dan tetap memiliki tautan langsung.
 
-## Menjalankan lokal
+Desain responsive dark navy dengan aksen **hijau → cyan → biru** mengikuti **logo LINNMS resmi**, bukan logo generik. Aset `assets/linnms-logo.png` dan `favicon.ico` bersumber dari `RamonVeredic/icon` pada `LINNMS/LINNMS_icon_cropped.png` dan `LINNMS/LINNMS_icon.ico`. Sub-brand konsisten: **NETWORK MANAGEMENT SYSTEM**.
 
-Buka `index.html` langsung atau jalankan dari folder:
+Mockup ringkasan jaringan pada beranda adalah ilustrasi konsep (bukan data perangkat asli atau klaim performa). Tidak ada logo atau foto stok.
+
+## Cara melihat
+
+Buka `index.html` di browser. Bisa juga jalankan server statis:
 
 ```bash
+cd linnms-landingpage-tamplat
 python3 -m http.server 8000
 ```
 
 Lalu buka `http://localhost:8000`.
 
-## Catatan operasional
-- Image production: `ghcr.io/ramonveredic/linnms`, dengan tag yang benar-benar sudah diterbitkan.
-- File Compose rujukan: `RamonVeredic/LINNMS/deploy/`. Sesuaikan keamanan database sebelum deployment.
-- OID enterprise ZTE (`1.3.6.1.4.1.3902`) dan HIOSO (`1.3.6.1.4.1.25355`) didasarkan pada cabang yang terlihat pada driver di `LINNMS-Staging`, bukan klaim bahwa setiap model/firmware mendukung seluruh sub-OID.
-- Contoh IP, community dan tag versi adalah placeholder.
-- Dokumentasi **tidak** memuat detail logika aplikasi.
+Tidak membutuhkan bundler, backend, atau dependensi npm. Google Fonts opsional dengan fallback sistem. File CSS dan JS bersifat mandiri.
 
-## Desain
-Komponen responsif, sidebar dokumentasi sticky, pencarian referensi OID, filter standar/vendor, pencarian error, panel troubleshooting expandable, tombol salin command dan navigasi mobile. Komponen tidak menyimulasikan metrik perangkat sungguhan.
+## Konfigurasi dan keamanan
+
+Nama image rujukan: `ghcr.io/ramonveredic/linnms`. Hanya gunakan tag yang sudah tersedia. Contoh deployment mengacu pada `RamonVeredic/LINNMS/deploy/`; periksa kredensial database dan batas akses sebelum dipakai.
+
+OID enterprise ZTE `1.3.6.1.4.1.3902` dan HIOSO `1.3.6.1.4.1.25355` adalah contoh cabang dari driver `LINNMS-Staging`, bukan jaminan kompatibilitas semua model. Sesuaikan credential dan IP pada contoh perintah SNMP. Portal sengaja tidak menjabarkan source code dan implementasi internal LINNMS.
