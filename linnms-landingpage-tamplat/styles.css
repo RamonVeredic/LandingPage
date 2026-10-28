@@ -47,16 +47,58 @@
 @media(max-width:560px){.hero-product .hero-copy h1{font-size:40px}.resource-grid{grid-template-columns:1fr}.resource-card:last-child{grid-column:auto}.preview-content{padding:15px}.preview-rail{width:44px}.preview-panel{padding:12px}.preview-head{padding:0 12px}.preview-demo{font-size:7px}.preview-welcome strong{font-size:16px}.about-illustration{min-height:310px}}
 
 
-/* Contoh tampilan berdasarkan struktur dashboard LINNMS asli */
-.hero-product .hero-grid{display:grid;grid-template-columns:1fr;gap:42px;padding:72px 0 82px;min-height:auto}
-.hero-product .hero-copy{max-width:830px;margin:0 auto;text-align:center}
-.hero-product .hero-copy h1{max-width:800px;font-size:clamp(43px,5vw,63px);margin-inline:auto}
-.hero-product .hero-copy>p{max-width:675px;margin-inline:auto;font-size:15px;line-height:1.8}
-.hero-product .eyebrow,.hero-product .hero-actions,.hero-product .hero-meta{justify-content:center}
-.hero-product .hero-meta{margin-top:30px}
-.auth-preview-intro{text-align:center;margin:0 auto -13px}
-.auth-preview-intro span{color:#83adcd;font:700 11px var(--mono);letter-spacing:.12em}
-.auth-preview-intro p{font-size:12px;margin:6px 0 0}
+/* LINNMS homepage: satu sumber aturan hero, dengan ritme tipografi yang konsisten */
+.hero-product .hero-grid{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:0;
+  min-height:0;
+  padding:70px 0 66px;
+}
+.hero-product .hero-copy{width:100%;max-width:920px;margin:0 0 36px;text-align:center}
+.hero-product .eyebrow{
+  display:inline-flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items:center;
+  gap:10px;
+  width:auto;
+  max-width:100%;
+  margin:0 auto 27px;
+  padding:9px 16px;
+  border:1px solid #3b615f;
+  background:#153033a6;
+  border-radius:999px;
+  color:#9af2de;
+  font:700 10px/1.5 var(--mono);
+  letter-spacing:.1em;
+}
+.hero-product .eyebrow-line{width:16px;background:var(--cyan)}
+.hero-product .eyebrow-index{margin:0 0 0 3px;color:#b7ccd6;font-size:9px;letter-spacing:.075em}
+.hero-product .hero-copy h1{
+  max-width:900px;
+  margin:0 auto 21px;
+  font-family:var(--heading);
+  font-size:clamp(40px,5.1vw,66px);
+  font-weight:800;
+  line-height:1.16;
+  letter-spacing:-.05em;
+  text-wrap:balance;
+}
+.hero-product .hero-copy h1 .gradient-text{display:block;line-height:1.25;padding-bottom:.04em}
+.hero-product .hero-copy>p{
+  max-width:640px;
+  margin:0 auto 27px;
+  color:#afc1d2;
+  font-size:15px;
+  line-height:1.8;
+  text-wrap:pretty;
+}
+.hero-product .hero-actions{display:flex;align-items:center;justify-content:center;gap:12px}
+.hero-product .hero-actions .btn{min-width:176px;height:52px}
+.hero-product .hero-actions .btn-ghost{min-width:176px}
+#dashboard-preview{scroll-margin-top:110px}
 .auth-preview-wrap{width:100%;min-width:0;background:#0c0f14;border:1px solid #3b4653;border-radius:14px;overflow:hidden;box-shadow:0 15px 40px #0004}
 .auth-preview-scroll{overflow-x:auto;scrollbar-color:#485768 #14191f;scrollbar-width:thin}
 .auth-dashboard{display:grid;grid-template-columns:190px minmax(0,1fr);font-family:Inter,system-ui,sans-serif;background:#0c0f14;color:#edf0f6;min-width:790px;font-size:12px;line-height:1.4}
@@ -121,76 +163,55 @@
 .auth-preview-note{display:flex;align-items:center;gap:8px;background:#121820;border-top:1px solid #364352;padding:12px 18px;font-size:11px;color:#b4c2d1}
 .auth-preview-dot{width:7px;height:7px;border-radius:50%;background:#57c785}
 .auth-mobile-note{display:none}
-@media(max-width:900px){.hero-product .hero-grid{padding:58px 0 70px;gap:34px}.auth-preview-wrap{border-radius:10px}.auth-mobile-note{display:inline-block;margin-left:auto;white-space:nowrap}}
-@media(max-width:560px){.hero-product .hero-copy h1{font-size:38px}.auth-preview-intro p{font-size:11px}.auth-preview-note{font-size:10px;flex-wrap:wrap}.auth-mobile-note{flex:0 0 100%;margin-left:15px}}
 
-
-
-/* Tata letak beranda: hero di atas, ilustrasi dashboard di bawah */
-.hero-product .hero-grid{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  gap:0;
-  min-height:0;
-  padding:68px 0 76px;
-}
-.hero-product .hero-copy{
-  width:100%;
-  max-width:860px;
-  margin:0 0 37px;
-  text-align:center;
-}
-.hero-product .hero-copy h1{
-  max-width:780px;
-  margin:0 auto 20px;
-  font-size:clamp(39px,4.6vw,61px);
-  letter-spacing:-.055em;
-  line-height:1.15;
-}
-.hero-product .hero-copy>p{
-  max-width:670px;
-  margin:0 auto 27px;
-  font-size:15px;
-  line-height:1.85;
-  color:#aec1d3;
-}
-.hero-product .eyebrow,
-.hero-product .hero-actions{justify-content:center}
-.hero-product .eyebrow{margin-bottom:19px}
-.hero-product .hero-actions{gap:12px}
-.auth-preview-wrap{
-  width:100%;
-  max-width:845px;
-  margin:0 auto;
-  border-radius:13px;
-  box-shadow:0 15px 38px #0004;
-}
-.auth-dashboard{min-width:790px}
-.auth-preview-note{
-  padding:10px 15px;
-  font-size:10px;
-  justify-content:flex-start;
-}
-.auth-preview-note .auth-mobile-note{display:none}
-#dashboard-preview{scroll-margin-top:115px}
-.topic-index{letter-spacing:.11em}
+/* Preview autentikasi: dua perangkat, tanpa panel aktivitas yang memperpanjang mockup */
+.auth-preview-wrap{width:min(100%,820px);min-width:0;margin:0 auto;border-radius:15px;box-shadow:0 22px 56px #0006}
+.auth-preview-scroll{overflow-x:auto;overscroll-behavior-inline:contain}
+.auth-dashboard{grid-template-columns:170px minmax(0,1fr);min-width:760px;font-family:var(--font)}
+.auth-sidebar{padding-bottom:13px}
+.auth-app-brand{height:61px}
+.auth-side-section{padding:11px 10px 5px}
+.auth-side-item{height:31px;gap:9px;font-size:11px;padding:5px 9px}
+.auth-topbar{height:38px;padding:0 16px}
+.auth-user-symbol{font-size:17px;line-height:1}
+.auth-page{padding:15px 16px 17px}
+.auth-title{gap:3px}
+.auth-title strong{font-size:17px}
+.auth-rule{margin:11px 0}
+.auth-stat-grid{gap:7px;margin-bottom:11px}
+.auth-stat{min-height:69px;padding:9px 8px;gap:6px}
+.auth-stat span{font-size:9px}
+.auth-stat strong{font-size:17px}
+.auth-panel{margin-bottom:0}
+.auth-device-toolbar{padding:9px 12px}
+.auth-search{height:30px}
+.auth-add{padding:7px 12px}
+.auth-table-scroll th{padding:9px 10px}
+.auth-table-scroll td{padding:9px 10px}
+.auth-row-actions{display:inline-flex;align-items:center;gap:10px;font-size:14px}
+.auth-pagination{align-items:center;padding:9px 12px;font-size:10px}
+.auth-pagination-controls{display:inline-flex;align-items:center;gap:11px}
+.auth-pagination-controls i{font-size:12px}
+.auth-preview-note{justify-content:flex-start;padding:10px 14px;font-size:10px}
+.auth-mobile-note{display:none}
 @media(max-width:900px){
-  .hero-product .hero-grid{padding:53px 0 64px}
-  .hero-product .hero-copy{margin-bottom:29px}
+  .hero-product .hero-grid{padding:57px 0 55px}
+  .hero-product .hero-copy{margin-bottom:30px}
   .auth-preview-wrap{max-width:100%}
-  .auth-preview-scroll{overflow-x:auto}
-  .auth-mobile-note{display:inline!important;margin-left:auto}
+  .auth-mobile-note{display:inline-flex;align-items:center;gap:5px;margin-left:auto}
 }
 @media(max-width:560px){
-  .hero-product .hero-grid{padding:45px 0 56px}
-  .hero-product .hero-copy{margin-bottom:23px}
-  .hero-product .hero-copy h1{font-size:clamp(34px,9vw,43px)}
-  .hero-product .hero-copy>p{font-size:13px;line-height:1.8}
-  .hero-product .hero-actions{gap:9px}
-  .hero-product .hero-actions .btn{width:100%}
-  .auth-preview-note{font-size:9px;flex-wrap:wrap}
-  .auth-preview-note .auth-mobile-note{margin-left:15px;flex-basis:100%}
+  .hero-product .hero-grid{padding:43px 0 46px}
+  .hero-product .hero-copy{margin-bottom:25px}
+  .hero-product .eyebrow{gap:7px;max-width:100%;padding:8px 12px;margin-bottom:22px}
+  .hero-product .eyebrow-index{margin:0;font-size:8px}
+  .hero-product .hero-copy h1{font-size:clamp(34px,8.7vw,44px);letter-spacing:-.047em;line-height:1.17;margin-bottom:18px}
+  .hero-product .hero-copy h1 .gradient-text{line-height:1.22}
+  .hero-product .hero-copy>p{font-size:13px;line-height:1.75;margin-bottom:23px}
+  .hero-product .hero-actions{gap:10px;flex-direction:column}
+  .hero-product .hero-actions .btn{width:100%;max-width:340px;height:50px}
+  .auth-preview-note{flex-wrap:wrap;gap:6px;font-size:9px}
+  .auth-mobile-note{flex-basis:100%;margin-left:14px}
 }
 
 /* Halaman produk, dokumentasi, dan tentang */
@@ -229,3 +250,51 @@
 .doc-sidebar-links a:hover{color:#78e0d1}
 @media(max-width:850px){.docs-hub-grid,.about-use-grid{grid-template-columns:1fr 1fr}.docs-hub-card:last-child{grid-column:span 2}.docs-hub-heading{align-items:start;flex-direction:column;gap:12px}.product-about .feature-split{gap:20px}}
 @media(max-width:560px){.docs-hub-grid,.about-use-grid{grid-template-columns:1fr}.docs-hub-card:last-child{grid-column:auto}.product-about-panel{flex-direction:column;align-items:flex-start;gap:15px;padding:24px}.docs-hub-note{padding-top:12px}.about-actions,.about-actions .btn{width:100%}}
+
+
+/* Komponen interaksi seragam untuk seluruh halaman, ikon dari Bootstrap Icons CDN */
+.primary-nav{gap:6px}
+.primary-nav a{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-width:102px;height:42px;padding:0 13px;
+  border:1px solid transparent;border-radius:10px;
+  font-size:13px;font-weight:700;white-space:nowrap;
+  transition:color .2s,background-color .2s,border-color .2s,transform .2s;
+}
+.primary-nav a:hover{color:#effffb;background:#1e3545;border-color:#3d6a72;transform:translateY(-1px)}
+.primary-nav a[aria-current=page]{color:#acffdf;background:#1b383c;border-color:#366a65}
+.primary-nav a[aria-current=page]:after{display:none}
+.header-cta{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  width:165px;min-width:165px;height:44px;padding:0 13px;
+  border:1px solid #4e7381;border-radius:10px;
+  color:#e3fff8;font-size:12px;font-weight:700;
+  background:#1d3541;
+  transition:background-color .2s,border-color .2s,box-shadow .2s,transform .2s;
+}
+.header-cta:hover{background:#27505a;border-color:#70d9c3;box-shadow:0 7px 20px #4dd8c71f;transform:translateY(-1px)}
+.header-cta .bi{margin:0;color:#8ff0d2;font-size:15px}
+.btn{gap:12px;min-height:50px;padding:12px 21px;font-size:13px;border:1px solid transparent;transition:transform .2s,background .2s,border-color .2s,box-shadow .2s}
+.btn .bi{font-size:16px;line-height:1}
+.btn-primary:hover{box-shadow:0 16px 34px #54e5d43a;filter:brightness(1.04)}
+.btn-ghost{border-color:#435b70}
+.btn-ghost:hover{background:#233b4c;border-color:#81c7c9}
+.text-link{align-items:center;gap:9px}
+.text-link .bi,.footer-links .bi,.doc-next .bi,.docs-hub-link .bi,.sidebar-back .bi{font-size:14px;vertical-align:-.05em}
+.sidebar-back{display:inline-flex;align-items:center;gap:7px}
+.copy-btn{display:inline-flex;align-items:center;gap:7px;min-height:32px;padding:6px 11px;white-space:nowrap}
+.copy-btn .bi{font-size:13px}
+@media(max-width:1080px){
+  .primary-nav{gap:3px}
+  .primary-nav a{min-width:82px;padding:0 9px;font-size:12px}
+  .header-cta{width:149px;min-width:149px}
+}
+@media(max-width:820px){
+  .primary-nav{gap:6px}
+  .primary-nav a{width:100%;min-width:0;height:44px;padding:0 15px;justify-content:flex-start;font-size:13px}
+  .primary-nav a:hover{transform:none}
+}
+@media(max-width:560px){
+  .header-cta{display:none}
+  .btn{width:100%}
+}
