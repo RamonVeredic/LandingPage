@@ -4,8 +4,8 @@ document.addEventListener('DOMContentLoaded',()=>{
  document.querySelectorAll('[data-copy]').forEach(btn=>btn.addEventListener('click',async()=>{
   const code=btn.closest('.snippet')?.querySelector('pre code')?.textContent;
   if(!code)return;
-  try{await navigator.clipboard.writeText(code);const old=btn.textContent;btn.textContent='Tersalin ✓';setTimeout(()=>btn.textContent=old,1700)}
-  catch{const range=document.createRange(),sel=window.getSelection();const el=btn.closest('.snippet').querySelector('pre code');range.selectNodeContents(el);sel.removeAllRanges();sel.addRange(range);btn.textContent='Blok teks lalu salin';setTimeout(()=>{sel.removeAllRanges();btn.textContent='Salin ⧉'},2800)}
+  try{await navigator.clipboard.writeText(code);const old=btn.innerHTML;btn.innerHTML='Tersalin <i class="bi bi-check2" aria-hidden="true"></i>';setTimeout(()=>btn.innerHTML=old,1700)}
+  catch{const range=document.createRange(),sel=window.getSelection();const el=btn.closest('.snippet').querySelector('pre code');range.selectNodeContents(el);sel.removeAllRanges();sel.addRange(range);const old=btn.innerHTML;btn.textContent='Blok teks lalu salin';setTimeout(()=>{sel.removeAllRanges();btn.innerHTML=old},2800)}
  }));
  const oidInput=document.querySelector('#oid-search'),oidRows=[...document.querySelectorAll('#oid-table tbody tr')],oidButtons=[...document.querySelectorAll('[data-oid-filter]')],oidCount=document.querySelector('#oid-count');
  let oidType='all';
