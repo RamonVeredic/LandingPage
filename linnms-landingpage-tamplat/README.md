@@ -28,10 +28,14 @@ python3 -m http.server 8000
 
 Lalu buka `http://localhost:8000`.
 
-Tidak membutuhkan bundler, backend, atau dependensi npm. Google Fonts opsional dengan fallback sistem. File CSS dan JS bersifat mandiri.
+Tidak membutuhkan bundler, backend, atau dependensi npm. Google Fonts opsional dengan fallback sistem. Layout dan interaksi utama tetap memakai `styles.css` serta `script.js` lokal. Ikon menggunakan stylesheet **Bootstrap Icons 1.13.1 melalui jsDelivr CDN** pada semua halaman; Google Fonts dimuat dari CDN dengan fallback sistem. Jika offline, teks navigasi tetap tersedia tetapi ikon CDN tidak tampil. Tidak memerlukan bundler.
 
 ## Konfigurasi dan keamanan
 
 Nama image rujukan: `ghcr.io/ramonveredic/linnms`. Hanya gunakan tag yang sudah tersedia. Contoh deployment mengacu pada `RamonVeredic/LINNMS/deploy/`; periksa kredensial database dan batas akses sebelum dipakai.
 
 OID enterprise ZTE `1.3.6.1.4.1.3902` dan HIOSO `1.3.6.1.4.1.25355` adalah contoh cabang dari driver `LINNMS-Staging`, bukan jaminan kompatibilitas semua model. Sesuaikan credential dan IP pada contoh perintah SNMP. Portal sengaja tidak menjabarkan source code dan implementasi internal LINNMS.
+
+## Penyesuaian tampilan
+
+Hero beranda menggunakan tipografi dan spacing yang konsisten, dua CTA berukuran tetap, dan contoh dashboard ringkas dengan hanya dua baris perangkat. Preview merupakan data ilustrasi, bukan live monitor. Navigasi desktop memakai area klik berukuran tetap, hover, active, dan focus-visible; mobile tetap memakai menu responsif. CSS khusus tampilan tetap lokal untuk memudahkan perubahan desain tanpa build step.
