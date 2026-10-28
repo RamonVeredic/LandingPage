@@ -28,7 +28,7 @@ python3 -m http.server 8000
 
 Lalu buka `http://localhost:8000`.
 
-Tidak membutuhkan bundler, backend, atau dependensi npm. Google Fonts opsional dengan fallback sistem. Layout dan interaksi utama tetap memakai `styles.css` serta `script.js` lokal. Ikon menggunakan stylesheet **Bootstrap Icons 1.13.1 melalui jsDelivr CDN** pada semua halaman; Google Fonts dimuat dari CDN dengan fallback sistem. Jika offline, teks navigasi tetap tersedia tetapi ikon CDN tidak tampil. Tidak memerlukan bundler.
+Tidak membutuhkan bundler, backend, atau dependensi npm. Google Fonts opsional dengan fallback sistem. Semua halaman memuat **CSS dan JavaScript LINNMS melalui jsDelivr CDN** dari repository GitHub publik ini (`@main`). File `styles.css` dan `script.js` **tetap tersedia di repository sebagai sumber yang diedit**, bukan dipindahkan atau dihapus. Bootstrap Icons 1.13.1 dan Google Fonts juga melalui CDN. Tidak memerlukan bundler atau npm. Internet diperlukan untuk menampilkan CSS/JS dan ikon; halaman mungkin tidak tampil atau berfungsi penuh jika CDN tidak dapat diakses.
 
 ## Konfigurasi dan keamanan
 
@@ -38,4 +38,13 @@ OID enterprise ZTE `1.3.6.1.4.1.3902` dan HIOSO `1.3.6.1.4.1.25355` adalah conto
 
 ## Penyesuaian tampilan
 
-Hero beranda menggunakan tipografi dan spacing yang konsisten, dua CTA berukuran tetap, dan contoh dashboard ringkas dengan hanya dua baris perangkat. Preview merupakan data ilustrasi, bukan live monitor. Navigasi desktop memakai area klik berukuran tetap, hover, active, dan focus-visible; mobile tetap memakai menu responsif. CSS khusus tampilan tetap lokal untuk memudahkan perubahan desain tanpa build step.
+Hero beranda menggunakan tipografi dan spacing yang konsisten, dua CTA berukuran tetap, dan contoh dashboard ringkas dengan hanya dua baris perangkat. Preview merupakan data ilustrasi, bukan live monitor. Navigasi desktop memakai area klik berukuran tetap, hover, active, dan focus-visible; mobile tetap memakai menu responsif. CSS khusus tampilan tetap ada di GitHub, namun **diunduh browser dari CDN**. Tombol beranda dibuat lebih ringkas (42px desktop dan 44px mobile), tombol navigasi 38px, dan CTA header 40px.
+
+## CDN dan pembaruan tampilan
+
+Aset LINNMS dimuat dari:
+
+- CSS: `https://cdn.jsdelivr.net/gh/RamonVeredic/LandingPage@main/linnms-landingpage-tamplat/styles.css`
+- JS: `https://cdn.jsdelivr.net/gh/RamonVeredic/LandingPage@main/linnms-landingpage-tamplat/script.js`
+
+**Penting:** jsDelivr meng-cache URL berbasis branch seperti `@main` hingga sekitar **12 jam**. Perubahan CSS/JS pada pull request **belum tampil lewat URL CDN tersebut** sebelum di-merge ke `main`. Setelah merge, cache juga dapat menampilkan versi sebelumnya untuk sementara. Untuk pengecekan perubahan seketika, tes memakai link `styles.css` dan `script.js` lokal, atau gunakan URL CDN berbasis commit baru. Mengubah HTML menjadi CDN tidak mengganti tema atau mengharuskan JavaScript framework tambahan.
