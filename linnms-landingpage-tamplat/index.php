@@ -30,7 +30,7 @@
             decoding="async"
           /><span
             ><strong>LINNMS</strong
-            ><small>NETWORK MANAGEMENT SYSTEM</small></span
+            ><small>NETWORK MANAGEMENT</small></span
           ></a
         >
         <nav class="primary-nav" id="primary-nav" aria-label="Navigasi utama">
@@ -44,33 +44,16 @@
               aria-expanded="false"
               aria-controls="auth-menu-panel"
             >
-              Masuk / Daftar<span class="auth-caret" aria-hidden="true"></span>
+             Gabung<span class="auth-caret" aria-hidden="true"></span>
             </button>
             <div class="auth-menu-panel" id="auth-menu-panel" hidden>
-              <a
-                class="auth-link is-unavailable"
-                data-auth-link="login"
-                aria-disabled="true"
-                tabindex="-1"
-                >Masuk<small>URL belum tersedia</small></a
-              ><a
-                class="auth-link is-unavailable"
-                data-auth-link="register"
-                aria-disabled="true"
-                tabindex="-1"
-                >Daftar<small>URL belum tersedia</small></a
+              <a class="auth-link" href="#">Masuk</a>
+              <a class="auth-link" href="#">Daftar</a
               >
             </div>
           </div>
         </nav>
-        <button
-          class="menu-toggle"
-          type="button"
-          aria-expanded="false"
-          aria-controls="primary-nav"
-          aria-label="Buka navigasi"
-        >
-          <span></span><span></span><span></span>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Buka navigasi"> <span></span><span></span><span></span>
         </button>
       </div>
     </header>
@@ -79,8 +62,7 @@
         <div class="shell hero-grid">
           <div class="hero-copy">
             <div class="eyebrow">
-              <span class="eyebrow-line" aria-hidden="true"></span> MANAJEMEN
-              JARINGAN OLT &amp; ONU
+              <span class="eyebrow-line" aria-hidden="true"></span>NETWORK MANAGEMENT SYSTEM
             </div>
             <h1 class="hero-title">
               <span class="hero-title-line hero-title-main"
@@ -103,34 +85,23 @@
               <a class="btn btn-primary" href="fitur.html">Jelajahi fitur</a
               ><a class="btn btn-ghost" href="docs.html">Baca dokumentasi</a>
             </div>
-            <div class="hero-signals" aria-label="Cakupan LINNMS">
-              <span>Ringkasan perangkat</span><span>Status ONU</span
-              ><span>Aktivitas sinkronisasi</span>
-            </div>
+
           </div>
           <div class="auth-preview-wrap" id="dashboard-preview">
             <div class="auth-preview-header">
               <div class="preview-window-dots" aria-hidden="true">
                 <span></span><span></span><span></span>
               </div>
-              <strong>Dashboard LINNMS</strong
-              ><span>PRATINJAU / DATA CONTOH</span>
             </div>
             <div class="auth-preview-scroll">
               <div
                 class="auth-dashboard"
-                role="img"
-                aria-label="Contoh tampilan berdasarkan struktur dashboard LINNMS: menu kiri, enam kartu ringkasan status, dan tabel dua contoh perangkat. Data yang ditampilkan hanyalah contoh."
-              >
+                role="img">
                 <aside class="auth-sidebar">
                   <div class="auth-app-brand">
-                    <img
-                      src="assets/linnms-logo.png"
-                      alt=""
-                      width="26"
-                      height="26"
-                    /><span
-                      ><b>LINNMS</b><small>Network Management</small></span
+                    <img src="assets/linnms-logo.png" alt="" width="26" height="26" />
+                    <span><b>LINNMS
+                    </b><small>Network Management</small></span
                     >
                   </div>
                   <div class="auth-side-section">DASHBOARD</div>
@@ -196,9 +167,6 @@
                       stroke-linejoin="round"
                       aria-hidden="true"
                     >
-                      <rect x="3" y="4" width="18" height="16" rx="2" />
-                      <path d="M7 9h10M7 13h10M7 17h6" /></svg
-                    ><span>OLT Log</span>
                   </div>
                   <div class="auth-side-section">NOTIFIKASI</div>
                   <div class="auth-side-item">
@@ -248,7 +216,6 @@
                     <div class="auth-title">
                       <small>LINNMS / Dashboard</small
                       ><strong>DASHBOARD</strong>
-                      <p>Ringkasan perangkat dan aktivitas jaringan</p>
                     </div>
                     <div class="auth-rule"></div>
                     <div class="auth-stat-grid">
@@ -374,25 +341,10 @@
                           </tbody>
                         </table>
                       </div>
-                      <div class="auth-pagination">
-                        <span>Menampilkan 2 dari 48 perangkat</span
-                        ><span class="auth-pagination-controls"
-                          ><i class="bi bi-chevron-left" aria-hidden="true"></i
-                          ><b>1</b><span>2</span
-                          ><i class="bi bi-chevron-right" aria-hidden="true"></i
-                        ></span>
-                      </div>
                     </section>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="auth-preview-note">
-              <span class="auth-preview-dot"></span> Contoh tampilan dashboard
-              LINNMS · Bukan data langsung
-              <span class="auth-mobile-note"
-                >Geser untuk melihat dashboard</span
-              >
             </div>
           </div>
         </div>
@@ -463,31 +415,9 @@
               >Kenali LINNMS lebih lanjut</a
             >
           </div>
-          <div class="product-about-panel">
-            <img src="assets/linnms-logo.png" alt="" width="78" height="78" />
-            <div>
-              <strong>LINNMS</strong><span>Network Management System</span>
-              <p>
-                Satu tempat untuk melihat informasi dan status perangkat
-                jaringan.
-              </p>
-            </div>
-          </div>
         </div>
       </section>
-      <section class="section-block shell">
-        <div class="action-banner">
-          <div>
-            <span class="kicker">DOKUMENTASI</span>
-            <h2>Siap mulai menggunakan LINNMS?</h2>
-            <p>
-              Buka dokumentasi untuk panduan instalasi, referensi OID/SNMP, dan
-              penanganan masalah saat menggunakan LINNMS.
-            </p>
-          </div>
-          <a class="btn btn-primary" href="docs.html">Buka dokumentasi</a>
-        </div>
-      </section>
+
     </main>
     <footer class="footer">
       <div class="shell footer-top">
@@ -512,29 +442,24 @@
         </div>
         <div class="footer-links">
           <div>
-            <strong>Dokumentasi</strong><a href="docs.html">Semua panduan</a
-            ><a href="instalasi.html">Instalasi LINNMS</a
-            ><a href="oid.html">Referensi OID / SNMP</a
-            ><a href="troubleshooting.html">Masalah dan solusi</a>
+            <a href="docs.html">Dokumentasi</a>
+            <a href="instalasi.html">Instalasi</a>
+            <a href="oid.html">OID SNMP</a>
           </div>
           <div>
-            <strong>LINNMS</strong><a href="about.html">Tentang LINNMS</a
+           <a href="about.html">Tentang</a>
+           <a href="https://github.com/RamonVeredic/LINNMS" target="_blank" rel="noopener noreferrer" >Github</a
             ><a
-              href="https://github.com/RamonVeredic/LINNMS"
+              href="#"
               target="_blank"
               rel="noopener noreferrer"
-              >Repositori production</a
-            ><a
-              href="https://github.com/RamonVeredic/LINNMS-Staging"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Repositori staging</a
+              >Email</a
             >
           </div>
         </div>
       </div>
       <div class="shell footer-bottom">
-        <span>© 2026 LINNMS. Seluruh hak cipta dilindungi.</span
+        <span>© 2026 LINNMS</span
         ><span>Network Management System</span>
       </div>
     </footer>
