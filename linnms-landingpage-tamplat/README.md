@@ -14,7 +14,7 @@ Landing page khusus **LINNMS** dalam folder mandiri `linnms-landingpage-tamplat/
 
 Navigasi utama: **Beranda · Fitur · Dokumentasi · Tentang · Masuk / Daftar**. Fitur membuka halaman khusus `fitur.html` dengan detail setiap kemampuan; kartu fitur di beranda membuka bagian yang sesuai. Instalasi, OID, dan troubleshooting diakses dari pusat dokumentasi dan tetap memiliki tautan langsung.
 
-Desain responsive dark navy dengan aksen **hijau → cyan → biru** mengikuti **logo LINNMS resmi**, bukan logo generik. Aset `assets/linnms-logo.png` dan `favicon.ico` bersumber dari `RamonVeredic/icon` pada `LINNMS/LINNMS_icon_cropped.png` dan `LINNMS/LINNMS_icon.ico`. Sub-brand konsisten: **NETWORK MANAGEMENT SYSTEM**.
+Desain responsive dark navy dengan aksen **hijau → cyan → biru** mengikuti **logo LINNMS resmi**, bukan logo generik. Aset `assets/linnms-logo.png` dan `assets/favicon.ico` bersumber dari `RamonVeredic/icon` pada `LINNMS/LINNMS_icon_cropped.png` dan `LINNMS/LINNMS_icon.ico`. Sub-brand konsisten: **NETWORK MANAGEMENT SYSTEM**.
 
 Mockup ringkasan jaringan pada beranda adalah ilustrasi konsep (bukan data perangkat asli atau klaim performa). Tidak ada logo atau foto stok.
 
@@ -29,7 +29,7 @@ python3 -m http.server 8000
 
 Lalu buka `http://localhost:8000`.
 
-Tidak membutuhkan bundler, backend, atau dependensi npm. Google Fonts opsional dengan fallback sistem. Layout dan interaksi utama tetap memakai `styles.css` serta `script.js` lokal. Ikon menggunakan stylesheet **Bootstrap Icons 1.13.1 melalui jsDelivr CDN** pada semua halaman; Google Fonts dimuat dari CDN dengan fallback sistem. Jika offline, teks navigasi tetap tersedia tetapi ikon CDN tidak tampil. Tidak memerlukan bundler.
+Tidak membutuhkan bundler, backend, atau dependensi npm. Google Fonts opsional dengan fallback sistem. Layout dan interaksi utama tetap memakai `assets/css/styles.css` serta `assets/js/script.js` lokal. Ikon menggunakan stylesheet **Bootstrap Icons 1.13.1 melalui jsDelivr CDN** pada semua halaman; Google Fonts dimuat dari CDN dengan fallback sistem. Jika offline, teks navigasi tetap tersedia tetapi ikon CDN tidak tampil. Tidak memerlukan bundler.
 
 ## Konfigurasi dan keamanan
 
@@ -43,7 +43,7 @@ Hero beranda menggunakan tipografi dan spacing yang konsisten, dua CTA berukuran
 
 ## Dropdown Masuk / Daftar
 
-Edit konstanta `AUTH_URLS` pada awal `script.js` untuk memasukkan URL autentikasi resmi:
+Edit konstanta `AUTH_URLS` pada awal `assets/js/script.js` untuk memasukkan URL autentikasi resmi:
 
 ```js
 const AUTH_URLS={login:'https://domain-aplikasi.example/login',register:'https://domain-aplikasi.example/register'};
