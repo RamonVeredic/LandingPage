@@ -1,39 +1,27 @@
 <!doctype html>
 <html lang="id">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="theme-color" content="#0b111a">
-    <meta name="description" content="Daftar OID standar IF-MIB/MIB-II dan cabang OID ZTE/HIOSO yang muncul pada driver LINNMS.">
-    <title>Referensi OID &amp; SNMP | LINNMS</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <link rel="icon" href="assets/favicon.ico" sizes="any">
-</head>
+<?php
+$pageTitle = 'Referensi OID & SNMP | LINNMS';
+$pageDescription = 'Daftar OID standar IF-MIB/MIB-II dan cabang OID ZTE/HIOSO yang muncul pada driver LINNMS.';
+$activePage = 'docs';
+include __DIR__ . '/assets/parsial/head.php';
+?>
+<body>
+<?php include __DIR__ . '/assets/parsial/navbar.php'; ?>
 
-<body><a class="skip-link" href="#main">Langsung ke konten</a>
-    <header class="site-header">
-        <div class="shell header-inner"><a class="brand" href="index.html"><img class="brand-logo" src="assets/linnms-logo.png" alt="" width="44" height="44" decoding="async"><span><strong>LINNMS</strong><small>NETWORK MANAGEMENT SYSTEM</small></span></a>
-            <nav class="primary-nav" id="primary-nav" aria-label="Navigasi utama"><a href="index.html">Beranda</a><a href="fitur.html">Fitur</a><a href="docs.html" aria-current="page">Dokumentasi</a><a href="about.html">Tentang</a>
-                <div class="auth-menu"><button class="header-cta auth-trigger" type="button" aria-expanded="false" aria-controls="auth-menu-panel">Masuk / Daftar<span class="auth-caret" aria-hidden="true"></span></button>
-                    <div class="auth-menu-panel" id="auth-menu-panel" hidden><a class="auth-link is-unavailable" data-auth-link="login" aria-disabled="true" tabindex="-1">Masuk<small>URL belum tersedia</small></a><a class="auth-link is-unavailable" data-auth-link="register" aria-disabled="true" tabindex="-1">Daftar<small>URL belum tersedia</small></a></div>
-                </div>
-            </nav><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Buka navigasi"><span></span><span></span><span></span></button>
-        </div>
-    </header>
     <main id="main">
         <div class="page-head shell">
-            <div class="crumb"><a href="index.html">Beranda</a><span>/</span><a href="docs.html">Dokumentasi</a><span>/</span>Referensi OID</div><span class="kicker">LINNMS / DOKUMENTASI</span>
+            <div class="crumb"><a href="index.php">Beranda</a><span>/</span><a href="docs.php">Dokumentasi</a><span>/</span>Referensi OID</div><span class="kicker">LINNMS / DOKUMENTASI</span>
             <h1>Referensi <span class='gradient-text'>OID dan SNMP.</span></h1>
             <p>Kumpulan OID standar dan vendor yang dapat Anda gunakan sebagai referensi untuk memeriksa perangkat jaringan, baik dengan LINNMS maupun alat SNMP lainnya.</p>
             <div class="header-pills"><span class="pill">MIB-II</span><span class="pill">IF-MIB</span><span class="pill">ZTE · HIOSO</span></div>
         </div>
         <div class="shell docs-layout">
             <aside class="doc-aside">
-                <div class="aside-sticky"><a class="sidebar-back" href="docs.html"><i class="bi bi-arrow-left" aria-hidden="true"></i> Semua dokumentasi</a>
+                <div class="aside-sticky"><a class="sidebar-back" href="docs.php"><i class="bi bi-arrow-left" aria-hidden="true"></i> Semua dokumentasi</a>
                     <div class="aside-title">DAFTAR ISI</div><a href="#before">01 Cara membaca OID</a><a href="#reference">02 Tabel referensi</a><a href="#vendor">03 OID vendor</a><a href="#examples">04 Contoh perintah</a><a href="#results">05 Interpretasi hasil</a>
-                    <div class="doc-sidebar-links"><strong>Dokumentasi lainnya</strong><a href="instalasi.html">Instalasi LINNMS</a><a href="troubleshooting.html">Masalah dan solusi</a></div>
+                    <div class="doc-sidebar-links"><strong>Dokumentasi lainnya</strong><a href="instalasi.php">Instalasi LINNMS</a></div>
                 </div>
             </aside>
             <article class="doc-body">
@@ -243,7 +231,7 @@ snmpwalk -v2c -c 'COMMUNITY' DEVICE_IP 1.3.6.1.4.1.25355</code></pre>
                     </div>
                 </section>
                 <section class="doc-section" id="results">
-                    <div class="section-number">05 / TROUBLESHOOTING</div>
+                    <div class="section-number">05 / INTERPRETASI</div>
                     <h2>Arti respons umum</h2>
                     <div class="prereq-grid">
                         <div class="prereq"><span class="check-icon">✓</span>
@@ -271,26 +259,12 @@ snmpwalk -v2c -c 'COMMUNITY' DEVICE_IP 1.3.6.1.4.1.25355</code></pre>
                             </div>
                         </div>
                     </div>
-                    <p>Jika masih gagal, buka <a href="troubleshooting.html">panduan error & solusi</a> dengan pesan lengkap dari utilitas SNMP.</p>
+                    <p>Jika masih gagal, simpan keluaran perintah beserta model dan versi firmware untuk ditinjau bersama administrator jaringan.</p>
                 </section>
-                <div class="doc-next">
-                    <div><small>DOKUMENTASI LAINNYA</small><strong>Troubleshooting jaringan dan kontainer</strong></div><a href="troubleshooting.html">Lihat error</a>
-                </div>
             </article>
         </div>
     </main>
-    <footer class="footer">
-        <div class="shell footer-top">
-            <div><a class="footer-brand" href="index.html"><img class="brand-logo" src="assets/linnms-logo.png" alt="" width="44" height="44" decoding="async"><span><strong>LINNMS</strong><small>NETWORK MANAGEMENT SYSTEM</small></span></a>
-                <p>LINNMS — platform manajemen jaringan dengan dokumentasi instalasi, referensi SNMP, dan panduan teknis.</p>
-            </div>
-            <div class="footer-links">
-                <div><strong>Dokumentasi</strong><a href="docs.html">Semua panduan</a><a href="instalasi.html">Instalasi LINNMS</a><a href="oid.html">Referensi OID / SNMP</a><a href="troubleshooting.html">Masalah dan solusi</a></div>
-                <div><strong>LINNMS</strong><a href="about.html">Tentang LINNMS</a><a href="https://github.com/RamonVeredic/LINNMS" target="_blank" rel="noopener noreferrer">Repositori production</a><a href="https://github.com/RamonVeredic/LINNMS-Staging" target="_blank" rel="noopener noreferrer">Repositori staging</a></div>
-            </div>
-        </div>
-        <div class="shell footer-bottom"><span>© 2026 LINNMS. Seluruh hak cipta dilindungi.</span><span>Network Management System</span></div>
-    </footer>
+    <?php include __DIR__ . '/assets/parsial/foother.php'; ?>
     <script src="assets/js/script.js" defer></script>
 </body>
 

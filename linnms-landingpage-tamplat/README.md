@@ -4,15 +4,14 @@ Landing page khusus **LINNMS** dalam folder mandiri `linnms-landingpage-tamplat/
 
 ## Struktur situs
 
-- `index.html` — landing page produk: hero, contoh dashboard LINNMS, fitur utama, profil singkat dan CTA dokumentasi.
-- `fitur.html` — detail fitur pemantauan, pengelolaan OLT/ONU, dan aktivitas sinkronisasi.
-- `about.html` — profil produk, tujuan, dan sasaran pengguna LINNMS.
-- `docs.html` — indeks dokumentasi.
-- `instalasi.html` — panduan instalasi LINNMS Production (Docker Compose / CasaOS).
-- `oid.html` — referensi OID dan SNMP yang dapat digunakan dan dibagikan oleh pengguna umum, **bagian dari dokumentasi**, bukan produk.
-- `troubleshooting.html` — masalah saat memakai aplikasi LINNMS (akun, OLT/ONU, sinkronisasi, dan SNMP), bukan kegagalan GitHub atau CI.
+- `index.php` — landing page produk: hero, contoh dashboard LINNMS, fitur utama, profil singkat dan CTA dokumentasi.
+- `fitur.php` — detail fitur pemantauan, pengelolaan OLT/ONU, dan aktivitas sinkronisasi.
+- `about.php` — profil produk, tujuan, dan sasaran pengguna LINNMS.
+- `docs.php` — indeks dokumentasi.
+- `instalasi.php` — panduan instalasi LINNMS Production (Docker Compose / CasaOS).
+- `oid.php` — referensi OID dan SNMP yang dapat digunakan dan dibagikan oleh pengguna umum, **bagian dari dokumentasi**, bukan produk.
 
-Navigasi utama: **Beranda · Fitur · Dokumentasi · Tentang · Masuk / Daftar**. Fitur membuka halaman khusus `fitur.html` dengan detail setiap kemampuan; kartu fitur di beranda membuka bagian yang sesuai. Instalasi, OID, dan troubleshooting diakses dari pusat dokumentasi dan tetap memiliki tautan langsung.
+Navigasi utama: **Beranda · Fitur · Dokumentasi · Tentang · Masuk / Daftar**. Fitur membuka halaman khusus `fitur.php` dengan detail setiap kemampuan; kartu fitur di beranda membuka bagian yang sesuai. Instalasi dan OID diakses dari pusat dokumentasi.
 
 Desain responsive dark navy dengan aksen **hijau → cyan → biru** mengikuti **logo LINNMS resmi**, bukan logo generik. Aset `assets/linnms-logo.png` dan `assets/favicon.ico` bersumber dari `RamonVeredic/icon` pada `LINNMS/LINNMS_icon_cropped.png` dan `LINNMS/LINNMS_icon.ico`. Sub-brand konsisten: **NETWORK MANAGEMENT SYSTEM**.
 
@@ -20,11 +19,11 @@ Mockup ringkasan jaringan pada beranda adalah ilustrasi konsep (bukan data peran
 
 ## Cara melihat
 
-Buka `index.html` di browser. Bisa juga jalankan server statis:
+Buka situs melalui server PHP dari folder proyek:
 
 ```bash
 cd linnms-landingpage-tamplat
-python3 -m http.server 8000
+php -S 127.0.0.1:8000
 ```
 
 Lalu buka `http://localhost:8000`.

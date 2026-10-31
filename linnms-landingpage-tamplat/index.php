@@ -1,62 +1,15 @@
 <!doctype html>
 <html lang="id">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="theme-color" content="#0b111a" />
-    <meta
-      name="description"
-      content="LINNMS adalah Network Management System untuk pemantauan perangkat OLT dan ONU melalui dashboard yang terstruktur."
-    />
-    <title>Beranda | LINNMS</title>
-    <link rel="stylesheet" href="assets/css/styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
-    />
-    <link rel="icon" href="assets/favicon.ico" sizes="any" />
-  </head>
-  <body>
-    <a class="skip-link" href="#main">Langsung ke konten</a>
-    <header class="site-header">
-      <div class="shell header-inner">
-        <a class="brand" href="index.html"
-          ><img
-            class="brand-logo"
-            src="assets/linnms-logo.png"
-            alt=""
-            width="44"
-            height="44"
-            decoding="async"
-          /><span
-            ><strong>LINNMS</strong
-            ><small>NETWORK MANAGEMENT</small></span
-          ></a
-        >
-        <nav class="primary-nav" id="primary-nav" aria-label="Navigasi utama">
-          <a href="index.html" aria-current="page">Beranda</a
-          ><a href="fitur.html">Fitur</a><a href="docs.html">Dokumentasi</a
-          ><a href="about.html">Tentang</a>
-          <div class="auth-menu">
-            <button
-              class="header-cta auth-trigger"
-              type="button"
-              aria-expanded="false"
-              aria-controls="auth-menu-panel"
-            >
-             Gabung<span class="auth-caret" aria-hidden="true"></span>
-            </button>
-            <div class="auth-menu-panel" id="auth-menu-panel" hidden>
-              <a class="auth-link" href="#">Masuk</a>
-              <a class="auth-link" href="#">Daftar</a
-              >
-            </div>
-          </div>
-        </nav>
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Buka navigasi"> <span></span><span></span><span></span>
-        </button>
-      </div>
-    </header>
+<?php
+$pageTitle = 'Beranda | LINNMS';
+$pageDescription = 'LINNMS membantu memantau OLT, ONU, dan perangkat jaringan dari satu dashboard.';
+$activePage = 'home';
+include __DIR__ . '/assets/parsial/head.php';
+?>
+<body>
+<?php include __DIR__ . '/assets/parsial/navbar.php'; ?>
+
+   
     <main id="main">
       <section class="hero hero-product">
         <div class="shell hero-grid">
@@ -82,8 +35,8 @@
               </p>
             </div>
             <div class="hero-actions">
-              <a class="btn btn-primary" href="fitur.html">Jelajahi fitur</a
-              ><a class="btn btn-ghost" href="docs.html">Baca dokumentasi</a>
+              <a class="btn btn-primary" href="fitur.php">Jelajahi fitur</a
+              ><a class="btn btn-ghost" href="docs.php">Baca dokumentasi</a>
             </div>
 
           </div>
@@ -363,7 +316,7 @@
           </p>
         </div>
         <div class="topic-grid product-feature-grid">
-          <a class="topic-card product-feature" href="fitur.html#pemantauan"
+          <a class="topic-card product-feature" href="fitur.php#pemantauan"
             ><div class="topic-icon">
               <i class="bi bi-speedometer2" aria-hidden="true"></i>
             </div>
@@ -373,7 +326,7 @@
               kondisi jaringan.
             </p>
             <span class="feature-card-footer">Pelajari pemantauan</span></a
-          ><a class="topic-card product-feature" href="fitur.html#perangkat"
+          ><a class="topic-card product-feature" href="fitur.php#perangkat"
             ><div class="topic-icon">
               <i class="bi bi-diagram-3" aria-hidden="true"></i>
             </div>
@@ -383,7 +336,7 @@
               firmware yang digunakan.
             </p>
             <span class="feature-card-footer">Pelajari pengelolaan</span></a
-          ><a class="topic-card product-feature" href="fitur.html#sinkronisasi"
+          ><a class="topic-card product-feature" href="fitur.php#sinkronisasi"
             ><div class="topic-icon">
               <i class="bi bi-activity" aria-hidden="true"></i>
             </div>
@@ -396,7 +349,7 @@
           >
         </div>
         <div class="section-footer-link">
-          <a class="text-link" href="fitur.html"
+          <a class="text-link" href="fitur.php"
             >Lihat penjelasan seluruh fitur</a
           >
         </div>
@@ -411,7 +364,7 @@
               dibutuhkan saat pemantauan sehari-hari, terutama untuk lingkungan
               OLT dan ONU.
             </p>
-            <a class="text-link" href="about.html"
+            <a class="text-link" href="about.php"
               >Kenali LINNMS lebih lanjut</a
             >
           </div>
@@ -419,50 +372,9 @@
       </section>
 
     </main>
-    <footer class="footer">
-      <div class="shell footer-top">
-        <div>
-          <a class="footer-brand" href="index.html"
-            ><img
-              class="brand-logo"
-              src="assets/linnms-logo.png"
-              alt=""
-              width="44"
-              height="44"
-              decoding="async"
-            /><span
-              ><strong>LINNMS</strong
-              ><small>NETWORK MANAGEMENT SYSTEM</small></span
-            ></a
-          >
-          <p>
-            LINNMS membantu Anda memantau perangkat dan melihat kondisi jaringan
-            dari satu tempat.
-          </p>
-        </div>
-        <div class="footer-links">
-          <div>
-            <a href="docs.html">Dokumentasi</a>
-            <a href="instalasi.html">Instalasi</a>
-            <a href="oid.html">OID SNMP</a>
-          </div>
-          <div>
-           <a href="about.html">Tentang</a>
-           <a href="https://github.com/RamonVeredic/LINNMS" target="_blank" rel="noopener noreferrer" >Github</a
-            ><a
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Email</a
-            >
-          </div>
-        </div>
-      </div>
-      <div class="shell footer-bottom">
-        <span>© 2026 LINNMS</span
-        ><span>Network Management System</span>
-      </div>
-    </footer>
+
+    <?php include __DIR__ . '/assets/parsial/foother.php'; ?>
+
     <script src="assets/js/script.js" defer></script>
   </body>
 </html>

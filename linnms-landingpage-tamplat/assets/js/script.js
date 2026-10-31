@@ -39,9 +39,6 @@ document.addEventListener('DOMContentLoaded',()=>{
  let oidType='all';
  function filterOid(){const term=(oidInput?.value||'').toLocaleLowerCase('id');let visible=0;oidRows.forEach(row=>{const show=(oidType==='all'||row.dataset.type===oidType)&&row.textContent.toLocaleLowerCase('id').includes(term);row.hidden=!show;if(show)visible++});if(oidCount)oidCount.textContent=visible+' entri ditemukan';const empty=document.querySelector('#oid-empty');if(empty)empty.style.display=visible?'none':'block'}
  oidInput?.addEventListener('input',filterOid);oidButtons.forEach(btn=>btn.addEventListener('click',()=>{oidType=btn.dataset.oidFilter;oidButtons.forEach(b=>b.setAttribute('aria-pressed',String(b===btn)));filterOid()}));filterOid();
- const errorInput=document.querySelector('#error-search'),faqs=[...document.querySelectorAll('.faq')],errorCount=document.querySelector('#error-count');
- function filterErrors(){const term=(errorInput?.value||'').toLocaleLowerCase('id');let n=0;faqs.forEach(el=>{const show=el.textContent.toLocaleLowerCase('id').includes(term);el.hidden=!show;if(show)n++});if(errorCount)errorCount.textContent=n+' kategori error ditemukan';const empty=document.querySelector('#error-empty');if(empty)empty.style.display=n?'none':'block'}
- errorInput?.addEventListener('input',filterErrors);filterErrors();
  const headingLinks=[...document.querySelectorAll('.aside-sticky > a[href^="#"]')];
  if(headingLinks.length&&'IntersectionObserver' in window){const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){headingLinks.forEach(a=>a.classList.toggle('active',a.hash==='#'+entry.target.id))}})},{rootMargin:'-110px 0px -70% 0px'});document.querySelectorAll('.doc-section[id]').forEach(s=>observer.observe(s))}
 });
